@@ -1,6 +1,6 @@
 #!/bin/bash
 cd semaphore/vote && sudo docker build -t semaphore/vote .
-if [ "$(docker ps -a | grep vote)" ]; then
+if [ "$(sudo docker ps -a | grep vote)" ]; then
   sudo docker stop vote
   sudo docker rm vote
 fi
