@@ -1,5 +1,5 @@
 #!/bin/bash
-cd semaphore/vote && sudo docker build -t semaphore/vote .
+cd ~/semaphore/vote && sudo docker build -t semaphore/vote .
 if [ "$(sudo docker ps -a | grep vote)" ]; then
   sudo docker stop vote
   sudo docker rm vote
